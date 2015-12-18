@@ -15,8 +15,8 @@ int findCycle(Node *head){
 		}
 	}
 	if(p == q){ //presence of cycle. we need to find the start node
-		*p = head;
-    	while(p != q){
+	    *p = head;
+        while(p != q){
 			p = p->next; //move at the same pace
 			q = q->next;
 		}
