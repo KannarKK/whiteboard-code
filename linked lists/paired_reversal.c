@@ -26,7 +26,7 @@ Node * iterative_pair_reverse(Node *head){
         cur = cur->next;  //b
         y = cur->next;
         cur->next = prev;  //reverse a->b
-        prev->next = y;   //forge new connection b->y
+        prev->next = y;   //forge new connection a->y
         if(x==NULL) //first time
             head = cur;
         else
@@ -46,7 +46,7 @@ Node * recursive_pair_reverse(Node *head){
         prev->next = cur->next;
         cur->next = prev;  //b->a
         head = cur;
-        head->next->next = recursive_pair_reverse(head->next->next); // a->y;
+        head->next->next = recursive_pair_reverse(head->next->next); // a->y or x->b same in case of recursion
         return head;
     }
 }
